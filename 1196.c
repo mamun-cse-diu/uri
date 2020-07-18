@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+int main () {
+	char arr[48] = "`1234567890-=QWERTYUIOP[]\\ASDFGHJKL;'ZXCVBNM,./";
+	char c;
+	int i;
+
+	while( scanf("%c",&c)!=EOF){
+
+		for (i=0; i<48; i++){
+			if (c == arr[i]){
+				printf("%c",arr[i-1]);
+				break;
+			}
+			else if (c == ' '){
+				printf(" ");
+				break;
+			}
+			else if (c == '\n'){
+				printf("\n");
+				break;
+			}
+		}
+	}
+
+}
